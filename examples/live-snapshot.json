@@ -1,0 +1,98 @@
+{
+  "queried_at": "2026-10-24T18:16:02+08:00",
+  "note": "Historical extracted amounts; no credentials or user address.",
+  "groups": [
+    {
+      "flavor": "麦辣",
+      "required": {
+        "901440": 1,
+        "901700": 1
+      },
+      "quotes": [
+        {
+          "id": "single",
+          "foods": {
+            "901440": 1,
+            "901700": 1
+          },
+          "drinks": 0,
+          "response": {
+            "success": true,
+            "code": 200,
+            "data": {
+              "productPrice": 4150,
+              "deliveryPrice": 600,
+              "packingPrice": 190,
+              "price": 4940
+            }
+          }
+        },
+        {
+          "id": "combo",
+          "foods": {
+            "901440": 1,
+            "901700": 1,
+            "901401": 1
+          },
+          "drinks": 1,
+          "response": {
+            "success": true,
+            "code": 200,
+            "data": {
+              "productPrice": 4590,
+              "deliveryPrice": 600,
+              "packingPrice": 190,
+              "price": 5380
+            }
+          }
+        }
+      ]
+    },
+    {
+      "flavor": "板烧",
+      "required": {
+        "901406": 1,
+        "901700": 1
+      },
+      "quotes": [
+        {
+          "id": "single",
+          "foods": {
+            "901406": 1,
+            "901700": 1
+          },
+          "drinks": 0,
+          "response": {
+            "success": true,
+            "code": 200,
+            "data": {
+              "productPrice": 4250,
+              "deliveryPrice": 600,
+              "packingPrice": 190,
+              "price": 5040
+            }
+          }
+        },
+        {
+          "id": "combo",
+          "foods": {
+            "901406": 1,
+            "901700": 1,
+            "901401": 1
+          },
+          "drinks": 1,
+          "response": {
+            "success": true,
+            "code": 200,
+            "data": {
+              "productPrice": 4690,
+              "deliveryPrice": 600,
+              "packingPrice": 190,
+              "price": 5480
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

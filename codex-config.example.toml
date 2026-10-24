@@ -1,0 +1,4 @@
+[mcp_servers.mcd-mcp]
+url = "https://mcp.mcd.cn"
+bearer_token_env_var = "MCD_MCP_TOKEN"
+enabled_tools = ["delivery-query-addresses", "delivery-query-stores", "query-meals", "query-meal-detail", "query-store-coupons", "calculate-price"]
