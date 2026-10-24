@@ -4,6 +4,14 @@
 
 面向已有饮料、希望按需点餐的麦乐送用户的免费 Skill。通过官方 MCP 查询实时菜单、套餐详情、个人可用券和价格，比较含配送打包费的实际付款。
 
+## 先体验，再安装
+
+下载仓库 ZIP 并解压，双击 [docs/index.html](docs/index.html) 即可免安装体验：切换口味、是否接受饮料，查看实际差价并复制结果。历史真实报价，不实时查价。
+
+[逐步使用教程](docs/quick-start.md) · [网页版教程](docs/guide.html) · [本轮实时验证](examples/live-verification-v03.json)
+
+在线托管待仓库所有者在 Settings → Pages 选择 main 的 /docs 目录；当前不承诺预计网址已经可用。
+
 ## 安装与使用
 
 1. 在 https://open.mcd.cn/mcp 开通本人 Token。
@@ -53,4 +61,8 @@ python scripts/replay.py
 
 官方活动：https://github.com/M-China/mcd-developer-innovation-challenge
 
-公开仓库：https://github.com/lomcho/maimai-no-drink 。报名进度见参赛提交说明.md。未使用WorkBuddy；官方声明保持原文，项目所有者已确认公开发布与报名。
+公开仓库：https://github.com/lomcho/maimai-no-drink 。[官方已确认报名成功](https://github.com/M-China/mcd-developer-innovation-challenge/issues/1267#issuecomment-6383383990)。未使用WorkBuddy；官方声明保持原文，项目所有者已确认公开发布与报名。
+
+## v0.3 使用进展
+
+补齐免安装历史体验、使用教程和随技能分发的只读 MCP 备用入口。2026-10-24 19:10 已经通过该入口重新完成四方案真实试算。原生工具在本会话仍未显示，新会话自动发现及第二账号使用仍需验证。界面以文字和价格比较为主，未复制其他项目的代码或图片。

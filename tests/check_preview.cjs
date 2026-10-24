@@ -1,0 +1,7 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const html=fs.readFileSync('docs/index.html','utf8');const source=html.match(/<script>([\s\S]*?)<\/script>/)[1];
+const els={};function element(){return {textContent:'',innerHTML:'',value:'',dataset:{},setAttribute(k,v){this[k]=v},addEventListener(k,f){this[k]=f},focus(){this.focused=true},select(){this.selected=true}}}
+const flavors=[0,1].map(n=>Object.assign(element(),{dataset:{flavor:String(n)}})),prefs=[false,true].map(n=>Object.assign(element(),{dataset:{strict:String(n)}}));
+const doc={getElementById(id){return els[id]??=element()},querySelectorAll(sel){return sel==='[data-flavor]'?flavors:prefs}};
+let copied='';const context=vm.createContext({document:doc,navigator:{clipboard:{writeText:async t=>{copied=t}}}});vm.runInContext(source,context);
+(async()=>{assert(els.cards.innerHTML.includes('49.40'));flavors[1].click();assert(els.cards.innerHTML.includes('50.40'));assert(els.cards.innerHTML.includes('54.80'));prefs[1].click();assert(!els.cards.innerHTML.includes('54.80'));assert(els.copyText.value.includes('套餐已排除'));await els.copy.click();assert(copied.includes('非当前价格'));context.navigator.clipboard.writeText=async()=>{throw Error('denied')};await els.copy.click();assert(els.copyText.selected);prefs[0].click();assert(els.cards.innerHTML.includes('54.80'));assert(!els.copyStatus.textContent);console.log('PASS: both flavors, strict exclusion, return to comparison, dated copy, copy failure fallback, stale status reset');})();

@@ -1,0 +1,45 @@
+{
+  "queried_at": "2026-10-24T19:10:56.091372+08:00",
+  "method": "bundled mcp_readonly.py; agent-guided live query",
+  "coupon_count": 0,
+  "tableware": false,
+  "scope": "one previously selected delivery store; four candidates; no order",
+  "quotes": [
+    {
+      "flavor": "麦辣",
+      "kind": "单点",
+      "payable_fen": 4940,
+      "fees_complete": true,
+      "food_fen": 4150,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "flavor": "麦辣",
+      "kind": "四件套",
+      "payable_fen": 5380,
+      "fees_complete": true,
+      "food_fen": 4590,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "flavor": "板烧",
+      "kind": "单点",
+      "payable_fen": 5040,
+      "fees_complete": true,
+      "food_fen": 4250,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "flavor": "板烧",
+      "kind": "四件套",
+      "payable_fen": 5480,
+      "fees_complete": true,
+      "food_fen": 4690,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    }
+  ]
+}
