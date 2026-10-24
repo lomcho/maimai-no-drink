@@ -6,7 +6,8 @@ from datetime import datetime, timezone
 
 def rank(request, quotes, now=None):
     now = now or datetime.now(timezone.utc)
-    if request['drink_mode'] not in ('indifferent', 'exclude'):
+    drink_mode = request.get('drink_mode', 'exclude')
+    if drink_mode not in ('indifferent', 'exclude'):
         raise ValueError('Unsupported drink mode')
     if not request['required'] or any(type(v) is not int or v <= 0 for v in request['required'].values()):
         raise ValueError('Invalid required quantities')
@@ -38,14 +39,16 @@ def rank(request, quotes, now=None):
                 raise ValueError('invalid drinks')
             if not isinstance(q['foods'], dict) or any(type(v) is not int or v < 0 for v in q['foods'].values()):
                 raise ValueError('invalid food quantities')
-            if any(q['foods'].get(k, 0) != v for k, v in request['required'].items()):
+            if any(q['foods'].get(k, 0) < v for k, v in request['required'].items()):
                 raise ValueError('required food quantity mismatch')
+            if not request.get('allow_extra_food', False) and any(v != request['required'].get(k, 0) for k,v in q['foods'].items()):
+                raise ValueError('extra food not authorized')
             if not isinstance(q['resources'], list) or not set(q['resources']) <= set(request.get('allow_resources', [])):
                 raise ValueError('resource not authorized')
             stamp = datetime.fromisoformat(q['quoted_at'])
             if stamp.tzinfo is None or not 0 <= (now - stamp).total_seconds() <= 600:
                 raise ValueError('stale or invalid quote time')
-            if request['drink_mode'] == 'exclude' and q['drinks']:
+            if drink_mode == 'exclude' and q['drinks']:
                 raise ValueError('beverage excluded')
         except (KeyError, TypeError, ValueError) as e:
             reason = str(e)

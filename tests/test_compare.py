@@ -41,8 +41,17 @@ class QuoteTests(unittest.TestCase):
     def test_duplicate_ids_fail_closed(self):
         with self.assertRaises(ValueError):self.run_quotes([self.quote(),self.quote(payable_fen=1)])
     def test_extra_food_disclosed_in_result(self):
+        self.request['allow_extra_food'] = True
         r=self.run_quotes([self.quote(foods={'burger':1,'wing_piece':2,'nugget':5})])
         self.assertEqual(r['best']['foods']['nugget'],5)
+    def test_default_excludes_drinks(self):
+        self.request.pop('drink_mode')
+        self.assertIsNone(self.run_quotes([self.quote()])['best'])
+    def test_default_excludes_extra_food(self):
+        self.assertIsNone(self.run_quotes([self.quote(foods={'burger':1,'wing_piece':2,'nugget':5})])['best'])
+    def test_authorized_extra_quantity(self):
+        self.request['allow_extra_food'] = True
+        self.assertIsNotNone(self.run_quotes([self.quote(foods={'burger':1,'wing_piece':4})])['best'])
     def test_extra_required_food_not_same_portion(self):
         self.assertIsNone(self.run_quotes([self.quote(foods={'burger':2,'wing_piece':2})])['best'])
     def test_stale_or_future_quotes_rejected(self):

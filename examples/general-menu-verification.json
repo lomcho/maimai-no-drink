@@ -1,0 +1,87 @@
+{
+  "queried_at": "2026-10-24T20:14:09+08:00",
+  "menu_entries": 132,
+  "details_read": 132,
+  "failed_details": {},
+  "lookup_cases": [
+    {
+      "query": "土豆泥",
+      "status": "not_found_in_returned_menu",
+      "matches": [],
+      "note": "Substring matches are suggestions, not authorized substitutions. Absence is limited to this store/channel/time."
+    },
+    {
+      "query": "大鸡排",
+      "status": "needs_confirmation",
+      "matches": [
+        {
+          "code": "521156",
+          "names": [
+            "那么大鸡排（椒盐风味）"
+          ],
+          "parents": [
+            "9900000590",
+            "9900013854"
+          ],
+          "kinds": [
+            "menu",
+            "choice",
+            "single"
+          ]
+        }
+      ],
+      "note": "Substring matches are suggestions, not authorized substitutions. Absence is limited to this store/channel/time."
+    },
+    {
+      "query": "香芋派",
+      "status": "exact",
+      "matches": [
+        {
+          "code": "904106",
+          "names": [
+            "香芋派"
+          ],
+          "parents": [
+            "9900012945"
+          ],
+          "kinds": [
+            "menu",
+            "choice",
+            "single"
+          ]
+        }
+      ],
+      "note": "Substring matches are suggestions, not authorized substitutions. Absence is limited to this store/channel/time."
+    },
+    {
+      "query": "菠萝派",
+      "status": "exact",
+      "matches": [
+        {
+          "code": "904105",
+          "names": [
+            "菠萝派"
+          ],
+          "parents": [],
+          "kinds": [
+            "menu",
+            "single"
+          ]
+        }
+      ],
+      "note": "Substring matches are suggestions, not authorized substitutions. Absence is limited to this store/channel/time."
+    }
+  ],
+  "verification_request": "那么大鸡排（椒盐风味）1份＋香芋派1份；不要饮料，不额外加食物",
+  "quote": {
+    "payable_fen": 3210,
+    "fees_complete": true,
+    "food_fen": 2450,
+    "delivery_fen": 600,
+    "packing_fen": 160
+  },
+  "coupon_count": 0,
+  "discovery_complete": true,
+  "price_search_complete": false,
+  "note": "This verifies full menu discovery, out-of-example matching and one live quote, not general optimality or all possible coupon combinations."
+}
