@@ -58,5 +58,50 @@ class QuoteTests(unittest.TestCase):
         for t in ['2026-10-24T12:01:00+00:00','2026-10-24T11:49:00+00:00','2026-10-24T12:00:00']:
             with self.subTest(time=t):self.assertIsNone(self.run_quotes([self.quote(quoted_at=t)])['best'])
 
+class ValueOptionsTests(QuoteTests):
+    def recommend(self, quotes):
+        return module.recommend(self.request, quotes, self.now)
+    def test_separate_exact_and_extra(self):
+        self.request['drink_mode']='exclude'
+        base=self.quote(id='base',drinks=0,payable_fen=2600)
+        extra=self.quote(id='extra',drinks=0,payable_fen=2900,foods={'burger':1,'wing_piece':2,'fries':1})
+        r=self.recommend([extra,base])
+        self.assertEqual(r['best']['id'],'base')
+        self.assertEqual(r['value_options'][0]['delta_fen'],300)
+        self.assertEqual(r['value_options'][0]['extra_foods'],{'fries':1})
+    def test_cheaper_extra_is_not_discarded(self):
+        r=self.recommend([self.quote(id='base',drinks=0,payable_fen=3000),self.quote(id='extra',drinks=0,foods={'burger':1,'wing_piece':4})])
+        self.assertEqual(r['value_options'][0]['delta_fen'],-800)
+    def test_value_rejects_invalid_missing_drink_and_large_delta(self):
+        base=self.quote(id='base',drinks=0)
+        for changes in [dict(drinks=1),dict(fees_complete=False),dict(foods={'burger':1,'fries':1}),dict(payable_fen=2800),dict(context='other'),dict(resources=['points']),dict(quoted_at='2026-10-24T11:00:00+00:00')]:
+            with self.subTest(changes=changes):
+                q=self.quote(id='extra',drinks=0,foods={'burger':1,'wing_piece':2,'fries':1})
+                q.update(changes)
+                self.assertEqual(self.recommend([base,q])['value_options'],[])
+    def test_exact_only(self):
+        self.request['exact_only']=True
+        self.assertEqual(self.recommend([self.quote(drinks=0,foods={'burger':1,'wing_piece':4})])['value_options'],[])
+    def test_no_baseline_no_fake_difference(self):
+        r=self.recommend([self.quote(drinks=0,foods={'burger':1,'wing_piece':4})])
+        self.assertIsNone(r['best'])
+        self.assertIsNone(r['value_options'][0]['delta_fen'])
+    def test_budget_and_custom_increment(self):
+        self.request.update(extra_budget_fen=1000,budget_fen=2800)
+        q=self.quote(id='extra',drinks=0,payable_fen=2900,foods={'burger':1,'wing_piece':4})
+        self.assertEqual(self.recommend([self.quote(drinks=0),q])['value_options'],[])
+        self.request['budget_fen']=3000
+        self.assertEqual(len(self.recommend([self.quote(drinks=0),q])['value_options']),1)
+    def test_duplicate_baskets_and_max_two(self):
+        quotes=[self.quote(id='base',drinks=0)]
+        for i in range(1,5):
+            quotes.append(self.quote(id=str(i),drinks=0,payable_fen=2200+i,foods={'burger':1,'wing_piece':2,'fries':i}))
+        quotes.append(dict(quotes[1],id='duplicate',payable_fen=2202))
+        self.assertEqual([q['quote']['id'] for q in self.recommend(quotes)['value_options']],['1','2'])
+    def test_empty_and_invalid_budget(self):
+        self.assertEqual(self.recommend([])['value_options'],[])
+        self.request['extra_budget_fen']=-1
+        with self.assertRaises(ValueError):self.recommend([])
+
 if __name__ == '__main__':
     unittest.main()

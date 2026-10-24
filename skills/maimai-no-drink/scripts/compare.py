@@ -64,7 +64,49 @@ def rank(request, quotes, now=None):
             'rejected': rejected, 'scope': 'submitted verified candidates only'}
 
 
+def recommend(request, quotes, now=None):
+    """Keep exact ranking; offer separately validated no-drink extra-food options."""
+    cap = request.get('extra_budget_fen', 500)
+    budget = request.get('budget_fen')
+    for name, value in [('extra_budget_fen', cap), ('budget_fen', budget)]:
+        if value is not None and (type(value) is not int or value < 0):
+            raise ValueError('Invalid ' + name)
+    exact_request = dict(request, allow_extra_food=False)
+    exact = rank(exact_request, quotes, now)
+    result = dict(exact, value_options=[], value_scope='not searched',
+                  extra_budget_fen=cap)
+    if request.get('exact_only', False):
+        result['value_scope'] = 'disabled by exact-only preference'
+        return result
+    # This is permission to display an alternative, not permission to order it.
+    relaxed = dict(request, allow_extra_food=True, drink_mode='exclude')
+    validation = rank(relaxed, quotes, now)
+    invalid = {item['id'] for item in validation['rejected']}
+    baseline = exact['best']
+    candidates = []
+    seen_baskets = set()
+    for q in sorted(quotes, key=lambda q: (q.get('payable_fen') if type(q.get('payable_fen')) is int else 10**20, q['id'])):
+        if q['id'] in invalid:
+            continue
+        extras = {k: v-request['required'].get(k, 0) for k, v in q['foods'].items()
+                  if v > request['required'].get(k, 0)}
+        if not extras or (budget is not None and q['payable_fen'] > budget):
+            continue
+        delta = q['payable_fen']-baseline['payable_fen'] if baseline else None
+        if delta is not None and cap is not None and delta > cap:
+            continue
+        key = tuple(sorted((k,v) for k,v in q['foods'].items() if v))
+        if key in seen_baskets:
+            continue
+        seen_baskets.add(key)
+        candidates.append({'quote': q, 'extra_foods': extras, 'delta_fen': delta,
+                           'baseline_id': baseline['id'] if baseline else None})
+    result['value_options'] = candidates[:2]
+    result['value_scope'] = 'submitted verified no-drink candidates only; not a value score'
+    return result
+
+
 if __name__ == '__main__':
     with open(sys.argv[1], encoding='utf-8-sig') as stream:
         data = json.load(stream)
-    print(json.dumps(rank(data['request'], data['quotes']), ensure_ascii=False, indent=2))
+    print(json.dumps(recommend(data['request'], data['quotes']), ensure_ascii=False, indent=2))
