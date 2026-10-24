@@ -1,0 +1,1102 @@
+{
+  "queried_at": "2026-10-24T19:54:18+08:00",
+  "scope": "长沙某门店 / 麦乐送 / 不需要餐具 / 不新购会员 / 单点与5个已查套餐配置及补齐单点组合",
+  "coupon_count": 0,
+  "coupon_applied": false,
+  "catalog": {
+    "901440": "麦辣鸡腿汉堡",
+    "901406": "板烧鸡腿堡",
+    "901700": "麦辣鸡翅2块",
+    "901401": "麦乐鸡5块",
+    "501205": "薯条中",
+    "903050": "中杯可乐"
+  },
+  "rows": [
+    {
+      "target": [
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901700": 1
+      },
+      "baseline": true,
+      "payable_fen": 2280,
+      "fees_complete": true,
+      "food_fen": 1600,
+      "delivery_fen": 600,
+      "packing_fen": 80
+    },
+    {
+      "target": [
+        "901401"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901401": 1
+      },
+      "baseline": true,
+      "payable_fen": 2180,
+      "fees_complete": true,
+      "food_fen": 1500,
+      "delivery_fen": 600,
+      "packing_fen": 80
+    },
+    {
+      "target": [
+        "901401",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901700": 1,
+        "901401": 1
+      },
+      "baseline": true,
+      "payable_fen": 3860,
+      "fees_complete": true,
+      "food_fen": 3100,
+      "delivery_fen": 600,
+      "packing_fen": 160
+    },
+    {
+      "target": [
+        "901401",
+        "901700"
+      ],
+      "name": "四拼小食餐",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 4780,
+      "fees_complete": true,
+      "food_fen": 3990,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 2230,
+      "fees_complete": true,
+      "food_fen": 1550,
+      "delivery_fen": 600,
+      "packing_fen": 80
+    },
+    {
+      "target": [
+        "501205",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901700": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 3910,
+      "fees_complete": true,
+      "food_fen": 3150,
+      "delivery_fen": 600,
+      "packing_fen": 160
+    },
+    {
+      "target": [
+        "501205",
+        "901700"
+      ],
+      "name": "四拼小食餐",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 4780,
+      "fees_complete": true,
+      "food_fen": 3990,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901401"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 3810,
+      "fees_complete": true,
+      "food_fen": 3050,
+      "delivery_fen": 600,
+      "packing_fen": 160
+    },
+    {
+      "target": [
+        "501205",
+        "901401"
+      ],
+      "name": "四拼小食餐",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 4780,
+      "fees_complete": true,
+      "food_fen": 3990,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901401"
+      ],
+      "name": "麦乐鸡(5块)中套餐",
+      "foods": {
+        "901401": 1,
+        "501205": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 3840,
+      "fees_complete": true,
+      "food_fen": 3050,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901700": 1,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 5490,
+      "fees_complete": true,
+      "food_fen": 4650,
+      "delivery_fen": 600,
+      "packing_fen": 240
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901700"
+      ],
+      "name": "四拼小食餐",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 4780,
+      "fees_complete": true,
+      "food_fen": 3990,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901700"
+      ],
+      "name": "麦乐鸡(5块)中套餐＋补齐单点",
+      "foods": {
+        "901401": 1,
+        "501205": 1,
+        "903050": 1,
+        "901700": 1
+      },
+      "baseline": false,
+      "payable_fen": 5520,
+      "fees_complete": true,
+      "food_fen": 4650,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "901440"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1
+      },
+      "baseline": true,
+      "payable_fen": 3260,
+      "fees_complete": true,
+      "food_fen": 2550,
+      "delivery_fen": 600,
+      "packing_fen": 110
+    },
+    {
+      "target": [
+        "901440",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1,
+        "901700": 1
+      },
+      "baseline": true,
+      "payable_fen": 4940,
+      "fees_complete": true,
+      "food_fen": 4150,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901440",
+        "901700"
+      ],
+      "name": "精选单人餐四件套",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 5380,
+      "fees_complete": true,
+      "food_fen": 4590,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901401",
+        "901440"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1,
+        "901401": 1
+      },
+      "baseline": true,
+      "payable_fen": 4840,
+      "fees_complete": true,
+      "food_fen": 4050,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901401",
+        "901440"
+      ],
+      "name": "精选单人餐四件套",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 5380,
+      "fees_complete": true,
+      "food_fen": 4590,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901401",
+        "901440",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1
+      },
+      "baseline": true,
+      "payable_fen": 6520,
+      "fees_complete": true,
+      "food_fen": 5650,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "901401",
+        "901440",
+        "901700"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901440": 1
+      },
+      "baseline": false,
+      "payable_fen": 7440,
+      "fees_complete": true,
+      "food_fen": 6540,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "901401",
+        "901440",
+        "901700"
+      ],
+      "name": "精选单人餐四件套",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 5380,
+      "fees_complete": true,
+      "food_fen": 4590,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901440"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 4890,
+      "fees_complete": true,
+      "food_fen": 4100,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901440",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 6570,
+      "fees_complete": true,
+      "food_fen": 5700,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901440",
+        "901700"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901440": 1
+      },
+      "baseline": false,
+      "payable_fen": 7440,
+      "fees_complete": true,
+      "food_fen": 6540,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901440",
+        "901700"
+      ],
+      "name": "精选单人餐四件套＋补齐单点",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 7010,
+      "fees_complete": true,
+      "food_fen": 6140,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 6470,
+      "fees_complete": true,
+      "food_fen": 5600,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901440": 1
+      },
+      "baseline": false,
+      "payable_fen": 7440,
+      "fees_complete": true,
+      "food_fen": 6540,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440"
+      ],
+      "name": "麦乐鸡(5块)中套餐＋补齐单点",
+      "foods": {
+        "901401": 1,
+        "501205": 1,
+        "903050": 1,
+        "901440": 1
+      },
+      "baseline": false,
+      "payable_fen": 6500,
+      "fees_complete": true,
+      "food_fen": 5600,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440"
+      ],
+      "name": "精选单人餐四件套＋补齐单点",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 7010,
+      "fees_complete": true,
+      "food_fen": 6140,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 8100,
+      "fees_complete": true,
+      "food_fen": 7200,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440",
+        "901700"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901440": 1
+      },
+      "baseline": false,
+      "payable_fen": 7440,
+      "fees_complete": true,
+      "food_fen": 6540,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440",
+        "901700"
+      ],
+      "name": "麦乐鸡(5块)中套餐＋补齐单点",
+      "foods": {
+        "901401": 1,
+        "501205": 1,
+        "903050": 1,
+        "901440": 1,
+        "901700": 1
+      },
+      "baseline": false,
+      "payable_fen": 8100,
+      "fees_complete": true,
+      "food_fen": 7200,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901440",
+        "901700"
+      ],
+      "name": "精选单人餐四件套＋补齐单点",
+      "foods": {
+        "901440": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 7010,
+      "fees_complete": true,
+      "food_fen": 6140,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "901406"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1
+      },
+      "baseline": true,
+      "payable_fen": 3360,
+      "fees_complete": true,
+      "food_fen": 2650,
+      "delivery_fen": 600,
+      "packing_fen": 110
+    },
+    {
+      "target": [
+        "901406",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1,
+        "901700": 1
+      },
+      "baseline": true,
+      "payable_fen": 5040,
+      "fees_complete": true,
+      "food_fen": 4250,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901406",
+        "901700"
+      ],
+      "name": "精选单人餐四件套",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 5480,
+      "fees_complete": true,
+      "food_fen": 4690,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901401",
+        "901406"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1,
+        "901401": 1
+      },
+      "baseline": true,
+      "payable_fen": 4940,
+      "fees_complete": true,
+      "food_fen": 4150,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901401",
+        "901406"
+      ],
+      "name": "精选单人餐四件套",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 5480,
+      "fees_complete": true,
+      "food_fen": 4690,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1
+      },
+      "baseline": true,
+      "payable_fen": 6620,
+      "fees_complete": true,
+      "food_fen": 5750,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901406": 1
+      },
+      "baseline": false,
+      "payable_fen": 7540,
+      "fees_complete": true,
+      "food_fen": 6640,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "精选单人餐四件套",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 5480,
+      "fees_complete": true,
+      "food_fen": 4690,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901406"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 4990,
+      "fees_complete": true,
+      "food_fen": 4200,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901406"
+      ],
+      "name": "板烧鸡腿堡中套餐",
+      "foods": {
+        "901406": 1,
+        "501205": 1,
+        "903050": 1
+      },
+      "baseline": false,
+      "payable_fen": 4990,
+      "fees_complete": true,
+      "food_fen": 4200,
+      "delivery_fen": 600,
+      "packing_fen": 190
+    },
+    {
+      "target": [
+        "501205",
+        "901406",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 6670,
+      "fees_complete": true,
+      "food_fen": 5800,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901406",
+        "901700"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901406": 1
+      },
+      "baseline": false,
+      "payable_fen": 7540,
+      "fees_complete": true,
+      "food_fen": 6640,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901406",
+        "901700"
+      ],
+      "name": "精选单人餐四件套＋补齐单点",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 7110,
+      "fees_complete": true,
+      "food_fen": 6240,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901406",
+        "901700"
+      ],
+      "name": "板烧鸡腿堡中套餐＋补齐单点",
+      "foods": {
+        "901406": 1,
+        "501205": 1,
+        "903050": 1,
+        "901700": 1
+      },
+      "baseline": false,
+      "payable_fen": 6670,
+      "fees_complete": true,
+      "food_fen": 5800,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 6570,
+      "fees_complete": true,
+      "food_fen": 5700,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901406": 1
+      },
+      "baseline": false,
+      "payable_fen": 7540,
+      "fees_complete": true,
+      "food_fen": 6640,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406"
+      ],
+      "name": "麦乐鸡(5块)中套餐＋补齐单点",
+      "foods": {
+        "901401": 1,
+        "501205": 1,
+        "903050": 1,
+        "901406": 1
+      },
+      "baseline": false,
+      "payable_fen": 6600,
+      "fees_complete": true,
+      "food_fen": 5700,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406"
+      ],
+      "name": "精选单人餐四件套＋补齐单点",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 7110,
+      "fees_complete": true,
+      "food_fen": 6240,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406"
+      ],
+      "name": "板烧鸡腿堡中套餐＋补齐单点",
+      "foods": {
+        "901406": 1,
+        "501205": 1,
+        "903050": 1,
+        "901401": 1
+      },
+      "baseline": false,
+      "payable_fen": 6570,
+      "fees_complete": true,
+      "food_fen": 5700,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "按需单点",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1,
+        "501205": 1
+      },
+      "baseline": true,
+      "payable_fen": 8200,
+      "fees_complete": true,
+      "food_fen": 7300,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "四拼小食餐＋补齐单点",
+      "foods": {
+        "901700": 2,
+        "901401": 1,
+        "501205": 1,
+        "901406": 1
+      },
+      "baseline": false,
+      "payable_fen": 7540,
+      "fees_complete": true,
+      "food_fen": 6640,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "麦乐鸡(5块)中套餐＋补齐单点",
+      "foods": {
+        "901401": 1,
+        "501205": 1,
+        "903050": 1,
+        "901406": 1,
+        "901700": 1
+      },
+      "baseline": false,
+      "payable_fen": 8200,
+      "fees_complete": true,
+      "food_fen": 7300,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "精选单人餐四件套＋补齐单点",
+      "foods": {
+        "901406": 1,
+        "901700": 1,
+        "901401": 1,
+        "903050": 1,
+        "501205": 1
+      },
+      "baseline": false,
+      "payable_fen": 7110,
+      "fees_complete": true,
+      "food_fen": 6240,
+      "delivery_fen": 600,
+      "packing_fen": 270
+    },
+    {
+      "target": [
+        "501205",
+        "901401",
+        "901406",
+        "901700"
+      ],
+      "name": "板烧鸡腿堡中套餐＋补齐单点",
+      "foods": {
+        "901406": 1,
+        "501205": 1,
+        "903050": 1,
+        "901700": 1,
+        "901401": 1
+      },
+      "baseline": false,
+      "payable_fen": 8200,
+      "fees_complete": true,
+      "food_fen": 7300,
+      "delivery_fen": 600,
+      "packing_fen": 300
+    }
+  ],
+  "unique_calculations": 40,
+  "target_count": 23
+}
