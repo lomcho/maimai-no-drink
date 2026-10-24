@@ -6,11 +6,15 @@
 
 ## 先体验，再安装
 
-下载仓库 ZIP 并解压，双击 [docs/index.html](docs/index.html) 即可免安装体验：切换口味、是否接受饮料，查看实际差价并复制结果。历史真实报价，不实时查价。
+**[打开在线体验 →](https://lomcho.github.io/maimai-no-drink/)** · **[查看使用教程](https://lomcho.github.io/maimai-no-drink/guide.html)**
 
-[逐步使用教程](docs/quick-start.md) · [网页版教程](docs/guide.html) · [本轮实时验证](examples/live-verification-v03.json)
+浏览器打开即可使用，无需登录 GitHub、下载或安装。可切换口味、是否接受饮料，查看差价并复制结果。页面使用历史真实报价，不实时查价。
 
-在线托管待仓库所有者在 Settings → Pages 选择 main 的 /docs 目录；当前不承诺预计网址已经可用。
+也可以离线体验：在仓库点击 Code → Download ZIP，解压完整文件夹后，在电脑文件管理器中双击 `docs/index.html`。请保留同目录的 `theme.css` 和 `assets` 文件夹。
+
+注意：在 GitHub 网站点击 `docs/index.html` 会进入源码查看页，并不是运行网页。在线体验请使用上面的专用入口。
+
+[文字版教程](docs/quick-start.md) · [实时验证记录](examples/live-verification-v03.json)
 
 ## 安装与使用
 
@@ -66,3 +70,7 @@ python scripts/replay.py
 ## v0.3 使用进展
 
 补齐免安装历史体验、使用教程和随技能分发的只读 MCP 备用入口。2026-10-24 19:10 已经通过该入口重新完成四方案真实试算。原生工具在本会话仍未显示，新会话自动发现及第二账号使用仍需验证。界面以文字和价格比较为主，未复制其他项目的代码或图片。
+
+## 页面美术更新
+
+体验页采用白底、红黄点缀与独立生成的食物插画，支持手机和电脑。插画不是官方餐品照片，金额仍为标注日期的历史报价。
